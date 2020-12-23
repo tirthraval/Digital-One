@@ -1,0 +1,101 @@
+<html>
+<head>
+    
+    
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.8.0/dist/JsBarcode.all.min.js"></script>
+
+    
+    
+    <title>   Registration </title></head>
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="2.css">
+    <body>
+        <div class="main">
+        <form class="form-main" action="student_database.php" method="post">
+            
+            <span class="login-form-title p-b-33">
+						Student Registration
+					</span>
+            
+  <div class="form-group">
+      
+    <label for="name">Enter your name:</label>
+    <input type="name" class="form-control" id="name1"  required  name="nam">
+    
+  </div>
+  <div class="form-group">
+    <label for="Enrollment">Enrollment:</label>
+    <input type="number" class="form-control" id="enrollment" required  name="enroll">
+  </div>
+    
+             <div class="form-group">
+    <label for="Enrollment">Enter Moblie no.:</label>
+    <input type="number" class="form-control" id="moblie" required  name="mno">
+  </div>
+            
+    <div class="form-group">
+    <label for="Enrollment">Enter Email:</label>
+    <input type="email" class="form-control" id="email" required name="mail">
+  </div>
+            
+    
+            
+     <div class="form-group">
+    <label for="password">Enter password.:</label>
+    <input type="password" class="form-control" id="password" required name="pass">
+  </div>
+            
+      <div class="form-group">
+          <label for="gender">Gender :</label>
+     <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+   
+  </div>
+            
+       <div class="form-group">
+    <label for="birthday"> Enter Birthdate:</label>
+  <input type="date" id="birthdate" name="birthdate" min="1995-01-02">
+  </div>       
+             
+            
+ <div> 
+  
+     <input class="btn btn-primary" type="button" value="Genrate Barcode" required onclick="myFunction()" >
+     <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+    <img id="barcode"/>        
+</form>
+         </div>
+        
+        
+        
+        
+    </body>
+</html>
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.8.0/dist/JsBarcode.all.min.js"></script>
+<script >
+  function myFunction(){
+    var x = document.getElementById("enrollment").value;
+    //var qrcode= new QRCode(document.getElementById("qrcode"),{ width: 80,height: 80,});
+    //qrcode.makeCode(qrdata);
+    JsBarcode("#barcode", x);
+    
+  }
+</script>
+
+
+    
+    
